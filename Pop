@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Música Pop</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', 'Segoe UI', Tahoma, sans-serif;
+            line-height: 1.6;
+            background: #fff0f6;
+            color: #333;
+            padding: 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, #ff69b4, #d63384);
+            color: #fff;
+            text-align: center;
+            padding: 40px 20px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(214, 51, 132, 0.25);
+        }
+
+        header h1 {
+            font-family: 'Anton', sans-serif;
+            font-size: clamp(48px, 8vw, 75px);
+            font-weight: 400;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            text-shadow: 3px 3px 5px rgba(100, 0, 50, 0.3);
+        }
+
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        section {
+            background: #fff;
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 12px rgba(214, 51, 132, 0.10);
+            border: 1px solid #ffd6e7;
+        }
+
+        h2 {
+            color: #d63384;
+            border-bottom: 2px solid #ff69b4;
+            padding-bottom: 8px;
+            margin-bottom: 15px;
+        }
+
+        h3 {
+            color: #e84393;
+            margin-top: 15px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .timeline {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .era-card {
+            background: #fff0f6;
+            border-top: 4px solid #ff69b4;
+            padding: 15px;
+            border-radius: 10px;
+            font-size: 0.95rem;
+            box-shadow: 0 3px 8px rgba(214, 51, 132, 0.08);
+        }
+
+        .era-card h4 {
+            color: #d63384;
+            margin-bottom: 8px;
+        }
+
+        .artist-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .artist-card {
+            background: #fff8fb;
+            border-left: 4px solid #ff69b4;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 3px 8px rgba(214, 51, 132, 0.08);
+        }
+
+        .artist-card h4 {
+            color: #a61e62;
+            margin-bottom: 5px;
+        }
+
+        .artist-card .tag {
+            display: inline-block;
+            background: #ffd6e7;
+            color: #c21870;
+            font-size: 0.8rem;
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        footer {
+            background: linear-gradient(135deg, #c21870, #971357);
+            color: white;
+            text-align: center;
+            padding: 25px;
+            margin-top: 30px;
+            border-top: 3px solid #7c1249;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Música Pop</h1>
+        <p>História, características e grandes artistas do gênero</p>
+    </header>
+
+    <main>
+
+        <section>
+            <h2>O que define a Música Pop?</h2>
+
+            <p>A <strong>música pop</strong> é um dos gêneros musicais de maior impacto no mundo, caracterizado por melodias cativantes, ritmos dançantes e produções voltadas para o consumo de massa.</p>
+
+            <h3>Características Principais:</h3>
+
+            <ul>
+                <li>Uso frequente do formato "verso – refrão – verso – refrão", focado na rápida assimilação pelo público.</li>
+                <li><strong>Refrão Marcante:</strong> É construída para ser memorável, com letras que tratam de temas universais como amor, relacionamentos e celebração.</li>
+                <li><strong>Apelo Visual e de Mídia:</strong> Forte ligação com videoclipes de alto orçamento, figurinos marcantes e grandes apresentações nos palcos.</li>
+                <li><strong>Maleabilidade:</strong> Absorve constantemente elementos de outros gêneros, como R&B, hip-hop, música eletrônica, funk e rock.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Evolução Histórica</h2>
+
+            <div class="timeline">
+
+                <div class="era-card">
+                    <h4>Anos 1950 - 1970</h4>
+                    <p><strong>Origens & Rock:</strong> Elvis Presley, The Beatles, ABBA, Bee Gees.</p>
+                </div>
+
+                <div class="era-card">
+                    <h4>Anos 1980</h4>
+                    <p><strong>A Era de Ouro:</strong> Michael Jackson, Madonna, Whitney Houston, Prince.</p>
+                </div>
+
+                <div class="era-card">
+                    <h4>Anos 1990 - 2000</h4>
+                    <p><strong>Teen Pop & Dance:</strong> Britney Spears, Backstreet Boys, Spice Girls, Lady Gaga.</p>
+                </div>
+
+                <div class="era-card">
+                    <h4>Anos 2010 - Atual</h4>
+                    <p><strong>Streaming & Eras:</strong> Taylor Swift, Beyoncé, The Weeknd, Bruno Mars.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <section>
+            <h2>Artistas de Destaque</h2>
+
+            <h3>1. As Raízes (Anos 1950 a 1970)</h3>
+
+            <div class="artist-grid">
+
+                <div class="artist-card">
+                    <h4>Elvis Presley & The Beatles</h4>
+                    <span class="tag">Pioneiros</span>
+                    <p>Ajudaram a transformar a música jovem da época no formato pop/rock moderno, focado em vendagem e apelo de rádio.</p>
+                </div>
+
+                <div class="artist-card">
+                    <h4>ABBA & Bee Gees</h4>
+                    <span class="tag">Era Disco</span>
+                    <p>Marcaram os anos 70 misturando melodias dançantes com a era <em>disco</em>, pavimentando o apelo global do pop.</p>
+                </div>
+
+            </div>
+
+            <h3 style="margin-top: 25px;">2. A Era de Ouro (Anos 1980)</h3>
+
+            <div class="artist-grid">
+
+                <div class="artist-card">
+                    <h4>Michael Jackson</h4>
+                    <span class="tag">Rei do Pop</span>
+                    <p>Revolucionou a indústria com o álbum <em>Thriller</em>, ditando os padrões de videoclipes, coreografias e produções globais.</p>
+                </div>
+
+                <div class="artist-card">
+                    <h4>Madonna</h4>
+                    <span class="tag">Rainha do Pop</span>
+                    <p>Redefiniu o papel da mulher na indústria musical através de inovação visual, empoderamento e quebra de tabus.</p>
+                </div>
+
+                <div class="artist-card">
+                    <h4>Whitney Houston & Prince</h4>
+                    <span class="tag">Vocal & Fusão</span>
+                    <p>Levaram a técnica vocal e a fusão do R&B/funk com a música pop ao ápice da indústria.</p>
+                </div>
+
+            </div>
+
+            <h3 style="margin-top: 25px;">3. A Explosão Teen Pop & Dance (Anos 1990 e 2000)</h3>
+
+            <div class="artist-grid">
+
+                <div class="artist-card">
+                    <h4>Britney Spears</h4>
+                    <span class="tag">Princesa do Pop</span>
+                    <p>Tornou-se um dos maiores nomes do pop jovem global no final dos anos 90 e início dos anos 2000.</p>
+                </div>
+
+                <div class="artist-card">
+                    <h4>Boy Bands & Girl Groups</h4>
+                    <span class="tag">Grupos Icônicos</span>
+                    <p>Grupos como <strong>Backstreet Boys</strong> e <strong>Spice Girls</strong> dominaram as paradas com danças sincronizadas e identidades visuais fortes.</p>
+                </div>
+
+                <div class="artist-card">
+                    <h4>Rihanna & Lady Gaga</h4>
+                    <span class="tag">Inovadoras</span>
+                    <p>Reorganizaram o som dos anos 2000 misturando <em>dance-pop</em>, alta costura e batidas urbanas.</p>
+                </div>
+
+            </div>
+
+            <h3 style="margin-top: 25px;">4. O Pop Atual (Anos 2010 até Hoje)</h3>
+
+            <div class="artist-grid">
+
+                <div class="artist-card">
+                    <h4>Taylor Swift</h4>
+                    <span class="tag">Composição & Recordes</span>
+                    <p>Uma das maiores compositoras do gênero, conhecida por quebrar recordes globais de streaming e lotação de estádios.</p>
+                </div>
+
+                <div class="artist-card">
+                    <h4>Beyoncé</h4>
+                    <span class="tag">Performance & Conceito</span>
+                    <p>Referência absoluta em performance, conceito de álbuns e misturas entre pop e cultura afro-americana.</p>
+                </div>
+
+                <div class="artist-card">
+                    <h4>The Weeknd & Bruno Mars</h4>
+                    <span class="tag">Retrofuturismo & R&B</span>
+                    <p>Mantêm vivas as influências retrô do R&B e da estética oitentista no topo das paradas contemporâneas.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <section>
+            <h2>A Importância do Gênero</h2>
+            <p>A música pop não é apenas um estilo musical, mas um reflexo sociocultural de sua época. Ela dita tendências de comportamento, lança modas globais e reflete as inovações tecnológicas de produção de cada tempo.</p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Feito por Emily Moraes</p>
+    </footer>
+
+</body>
+</html>
