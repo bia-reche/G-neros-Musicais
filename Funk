@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Música Funk</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.7;
+            background: #f8f5ff;
+            color: #383044;
+            padding: 25px;
+        }
+
+        header {
+            background: linear-gradient(120deg, #4b168f, #8b2be2, #ed168f);
+            color: white;
+            text-align: center;
+            padding: 65px 20px;
+            border-radius: 20px;
+            margin-bottom: 25px;
+            box-shadow: 0 10px 30px rgba(123, 47, 247, 0.25);
+        }
+
+        header h1 {
+            font-family: 'Bebas Neue', Impact, sans-serif;
+            font-size: clamp(4rem, 10vw, 7rem);
+            font-weight: 400;
+            letter-spacing: 12px;
+            line-height: 1;
+            margin-bottom: 15px;
+            text-shadow: 4px 5px 0 rgba(48, 9, 85, 0.3);
+        }
+
+        header p {
+            font-size: 1.05rem;
+            opacity: 0.95;
+        }
+
+        /* MENU DE NAVEGAÇÃO */
+        nav {
+            max-width: 1100px;
+            margin: 0 auto 35px;
+            padding: 15px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(65, 35, 100, 0.08);
+            position: sticky;
+            top: 10px;
+            z-index: 100;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 0;
+        }
+
+        nav a {
+            display: block;
+            text-decoration: none;
+            color: #7025c7;
+            font-size: 0.88rem;
+            font-weight: 700;
+            padding: 10px 15px;
+            border-radius: 25px;
+            transition: 0.3s ease;
+        }
+
+        nav a:hover {
+            background: linear-gradient(120deg, #7025c7, #ed168f);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        main {
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        section {
+            background: white;
+            padding: 30px;
+            border-radius: 18px;
+            margin-bottom: 28px;
+            box-shadow: 0 5px 20px rgba(65, 35, 100, 0.07);
+            border: 1px solid #eee5ff;
+            scroll-margin-top: 100px;
+        }
+
+        h2 {
+            color: #7025c7;
+            font-size: 1.65rem;
+            border-bottom: 3px solid #e7caff;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        h3 {
+            color: #d52b9b;
+            font-size: 1.2rem;
+            margin-top: 25px;
+            margin-bottom: 12px;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        ul {
+            margin-left: 22px;
+            margin-bottom: 15px;
+        }
+
+        li {
+            margin-bottom: 10px;
+            padding-left: 4px;
+        }
+
+        li::marker {
+            color: #a044e8;
+        }
+
+        .timeline {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+            gap: 18px;
+            margin: 25px 0 10px;
+        }
+
+        .era-card {
+            background: linear-gradient(145deg, #f5edff, #fff1fa);
+            border: 1px solid #ead8ff;
+            border-top: 5px solid #963de0;
+            padding: 20px;
+            border-radius: 13px;
+            transition: 0.3s ease;
+        }
+
+        .era-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 18px rgba(123, 47, 247, 0.13);
+        }
+
+        .era-card h4 {
+            color: #782ac5;
+            font-size: 1.05rem;
+            margin-bottom: 10px;
+        }
+
+        .era-card p {
+            font-size: 0.95rem;
+            margin-bottom: 0;
+        }
+
+        .artist-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 18px;
+            margin-top: 18px;
+        }
+
+        .artist-card {
+            background: #fcfaff;
+            border: 1px solid #eee3ff;
+            border-left: 5px solid #963de0;
+            padding: 20px;
+            border-radius: 12px;
+            transition: 0.3s ease;
+        }
+
+        .artist-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(123, 47, 247, 0.12);
+            border-left-color: #ed168f;
+        }
+
+        .artist-card h4 {
+            color: #39234f;
+            font-size: 1.08rem;
+            margin-bottom: 9px;
+        }
+
+        .artist-card p {
+            font-size: 0.94rem;
+            margin-bottom: 0;
+        }
+
+        .artist-card .tag {
+            display: inline-block;
+            background: #f1e3ff;
+            color: #852ec9;
+            font-size: 0.78rem;
+            padding: 4px 11px;
+            border-radius: 20px;
+            font-weight: bold;
+            margin-bottom: 12px;
+        }
+
+        footer {
+            background: linear-gradient(135deg, #9e7eb4, #915589);
+            color: white;
+            text-align: center;
+            padding: 25px;
+            margin-top: 30px;
+            border-top: 3px solid #9663a3;
+            border-radius: 12px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 12px;
+            }
+
+            header {
+                padding: 45px 15px;
+            }
+
+            header h1 {
+                font-size: 4.5rem;
+                letter-spacing: 8px;
+            }
+
+            nav {
+                position: relative;
+                top: 0;
+            }
+
+            nav ul {
+                gap: 5px;
+            }
+
+            nav a {
+                font-size: 0.78rem;
+                padding: 8px 10px;
+            }
+
+            section {
+                padding: 20px;
+            }
+
+            h2 {
+                font-size: 1.4rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>FUNK</h1>
+        <p>Origem, evolução e influência na cultura brasileira</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#definicao">O que é Funk?</a></li>
+            <li><a href="#historia">Evolução histórica</a></li>
+            <li><a href="#artistas">Artistas</a></li>
+            <li><a href="#estilos">Estilos</a></li>
+            <li><a href="#importancia">Importância</a></li>
+        </ul>
+    </nav>
+
+    <main>
+
+        <section id="definicao">
+            <h2>O que define o Funk?</h2>
+
+            <p>O <strong>funk</strong> é um gênero musical marcado por batidas fortes, ritmos dançantes e grande influência da cultura negra. O funk surgiu nos Estados Unidos, na década de 1960, e chegou ao Brasil, onde ganhou características próprias, principalmente nas comunidades do Rio de Janeiro e de São Paulo.</p>
+
+            <h3>Características Principais:</h3>
+
+            <ul>
+                <li><strong>Batidas Marcantes:</strong> Utiliza ritmos fortes e repetitivos que incentivam a dança.</li>
+                <li><strong>Linguagem Popular:</strong> Muitas músicas apresentam expressões do cotidiano e histórias vividas nas comunidades.</li>
+                <li><strong>Dança e Movimento:</strong> Possui coreografias e movimentos que fazem parte da identidade do gênero.</li>
+                <li><strong>Diversidade:</strong> Apresenta diferentes estilos, como funk carioca, funk ostentação, funk consciente e mandelão.</li>
+                <li><strong>Tecnologia:</strong> Utiliza batidas eletrônicas, sintetizadores, samplers e programas de produção musical.</li>
+            </ul>
+        </section>
+
+        <section id="historia">
+            <h2>Evolução Histórica</h2>
+
+            <div class="timeline">
+
+                <div class="era-card">
+                    <h4>Anos 1960 - 1970</h4>
+                    <p><strong>Origem:</strong> O funk se desenvolveu nos Estados Unidos, com artistas como James Brown e George Clinton.</p>
+                </div>
+
+                <div class="era-card">
+                    <h4>Anos 1980</h4>
+                    <p><strong>Chegada ao Brasil:</strong> Os bailes black e as festas do Rio de Janeiro ajudaram a popularizar o gênero.</p>
+                </div>
+
+                <div class="era-card">
+                    <h4>Anos 1990 - 2000</h4>
+                    <p><strong>Funk Carioca:</strong> O gênero ganhou identidade própria no Brasil, com DJs, MCs e batidas características.</p>
+                </div>
+
+                <div class="era-card">
+                    <h4>Anos 2010 - Atual</h4>
+                    <p><strong>Popularização:</strong> O funk conquistou o país e alcançou reconhecimento internacional por meio da internet e das plataformas digitais.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="artistas">
+            <h2>Artistas de Destaque</h2>
+
+            <h3>1. As Origens do Funk (Anos 1960 e 1970)</h3>
+
+            <div class="artist-grid">
+
+                <div class="artist-card">
+                    <h4>James Brown</h4>
+                    <span class="tag">Pioneiro</span>
+                    <p>Conhecido como uma das figuras mais importantes do funk americano, ajudou a desenvolver as batidas e os ritmos que influenciaram gerações.</p>
+                </div>
+
+                <div class="artist-card">
+                    <h4>George Clinton</h4>
+                    <span class="tag">Inovação Musical</span>
+                    <p>Foi responsável por projetos como Parliament e Funkadelic, misturando funk, rock e elementos psicodélicos.</p>
+                </div>
+
+            </div>
+
+            <h3>2. O Crescimento no Brasil (Anos 1980 e 1990)</h3>
+
+            <div class="artist-grid">
+
+                <div class="artist-card">
+                    <h4>DJ Marlboro</h4>
+                    <span class="tag">Funk Carioca</span>
+                    <p>Foi um dos principais responsáveis pelo desenvolvimento e popularização do funk carioca, ajudando a divulgar o gênero no Brasil.</p>
+                </div>
+
+                <div class="artist-card">
+                    <h4>Claudinho & Buchecha</h4>
+                    <span class="tag">Dupla de Sucesso</span>
+                    <p>Marcaram a história do funk brasileiro com músicas que misturavam batidas dançantes, melodias e letras românticas.</p>
+                </div>
+
+                <div class="artist-card">
+                    <h4>MC Marcinho</h4>
+                    <span class="tag">Funk Melody</span>
+                    <p>Ficou conhecido por suas músicas românticas e ajudou a popularizar o estilo funk melody.</p>
+                </div>
+
+            </div>
+
+            <h3>3. A Expansão do Funk (Anos 2000 e 2010)</h3>
+
+            <div class="artist-grid">
+
+                <div class="artist-card">
+                    <h4>Tati Quebra Barraco</h4>
+                    <span class="tag">Representatividade</span>
+                    <p>Ganhou destaque por sua personalidade e por abrir espaço para a presença feminina no funk carioca.</p>
+                </div>
+
+                <div class="artist-card">
+                    <h4>MC Catra</h4>
+                    <span class="tag">Ícone do Funk</span>
+                    <p>Foi um dos nomes mais conhecidos do funk brasileiro, marcado por sua presença e grande quantidade de músicas.</p>
+                </div>
+
+                <div class="artist-card">
+                    <h4>MC Guimê</h4>
+                    <span class="tag">Funk Ostentação</span>
+                    <p>Foi um dos principais representantes do funk ostentação, estilo que ganhou força em São Paulo.</p>
+                </div>
+
+            </div>
+
+            <h3>4. O Funk Atual (Anos 2020 até Hoje)</h3>
+
+            <div class="artist-grid">
+
+                <div class="artist-card">
+                    <h4>Anitta</h4>
+                    <span class="tag">Reconhecimento Internacional</span>
+                    <p>Levou elementos do funk brasileiro para o cenário internacional, misturando o gênero com pop e música latina.</p>
+                </div>
+
+                <div class="artist-card">
+                    <h4>MC Ryan SP</h4>
+                    <span class="tag">Funk Paulista</span>
+                    <p>É um dos nomes conhecidos da nova geração do funk de São Paulo, com músicas populares nas plataformas digitais.</p>
+                </div>
+
+                <div class="artist-card">
+                    <h4>MC Hariel</h4>
+                    <span class="tag">Funk Consciente</span>
+                    <p>É conhecido por músicas que abordam experiências pessoais, dificuldades sociais e a realidade das periferias.</p>
+                </div>
+
+                <div class="artist-card">
+                    <h4>MC Daniel</h4>
+                    <span class="tag">Nova Geração</span>
+                    <p>Conquistou popularidade com músicas dançantes e presença nas redes sociais e plataformas de streaming.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="estilos">
+            <h2>Principais Estilos de Funk</h2>
+
+            <ul>
+                <li><strong>Funk Carioca:</strong> Surgiu no Rio de Janeiro e é marcado por batidas eletrônicas e influência dos bailes funk.</li>
+                <li><strong>Funk Ostentação:</strong> Ganhou destaque em São Paulo e aborda temas como conquistas materiais, roupas, carros e dinheiro.</li>
+                <li><strong>Funk Melody:</strong> Possui melodias mais românticas e batidas dançantes.</li>
+                <li><strong>Funk Consciente:</strong> Apresenta letras sobre desigualdade social, dificuldades e experiências das comunidades.</li>
+                <li><strong>Mandelão:</strong> Estilo paulista conhecido por batidas intensas, graves fortes e sonoridade eletrônica.</li>
+            </ul>
+        </section>
+
+        <section id="importancia">
+            <h2>A Importância do Gênero</h2>
+
+            <p>O funk possui grande importância para a cultura brasileira, pois representa a criatividade, a identidade e as experiências de muitas comunidades. Além de ser uma forma de entretenimento, também funciona como meio de expressão social e cultural. O gênero movimenta a indústria musical, influencia a moda, a dança e as redes sociais, além de levar a cultura das periferias para diferentes partes do mundo.</p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Feito por Isabella Zattoni</p>
+    </footer>
+
+</body>
+</html>
