@@ -1,9 +1,474 @@
-<!doctype html>
-<html>
-    <head>
+<!DOCTYPE html>
+<html lang="pt-BR">
 
-    </head>
-    <body>
-        <h1>Olá mundo!</h1>
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mundo da Música | Explore novos sons</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #100d1c;
+            color: #f5f0ff;
+            line-height: 1.6;
+        }
+
+        /* MENU DE NAVEGAÇÃO */
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 8%;
+            background: #171326;
+            border-bottom: 1px solid #302746;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #ff70b8;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        nav a {
+            color: #eee7ff;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #ff70b8;
+        }
+
+        /* BANNER PRINCIPAL */
+
+        .hero {
+            min-height: 480px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 80px 20px;
+
+            background:
+                radial-gradient(circle at 20% 30%, #693b9c 0%, transparent 35%),
+                radial-gradient(circle at 80% 70%, #a52c75 0%, transparent 35%),
+                linear-gradient(135deg, #211638, #100d1c);
+        }
+
+        .hero .tag {
+            background: rgba(255, 112, 184, 0.15);
+            color: #ff8bc5;
+            padding: 8px 18px;
+            border-radius: 30px;
+            margin-bottom: 20px;
+            font-size: 0.9rem;
+            border: 1px solid rgba(255, 112, 184, 0.3);
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 15px;
+            line-height: 1.2;
+        }
+
+        .hero h1 span {
+            color: #ff70b8;
+        }
+
+        .hero p {
+            max-width: 700px;
+            color: #d0c5df;
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+        }
+
+        .hero-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #ff70b8, #a84dce);
+            color: white;
+            padding: 14px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .hero-button:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 25px rgba(255, 112, 184, 0.3);
+        }
+
+        /* CONTEÚDO GERAL */
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 65px 25px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 15px;
+            font-size: 2rem;
+            color: #ff83bd;
+        }
+
+        .section-description {
+            text-align: center;
+            color: #bcb1cf;
+            max-width: 700px;
+            margin: 0 auto 40px;
+        }
+
+        /* CARTÕES DOS GÊNEROS */
+
+        .genres-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 22px;
+        }
+
+        .genre-card {
+            background: #1d1830;
+            border: 1px solid #342947;
+            border-radius: 18px;
+            padding: 28px;
+            position: relative;
+            overflow: hidden;
+            transition: 0.3s;
+        }
+
+        .genre-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--accent);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .genre-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .genre-card h3 {
+            font-size: 1.5rem;
+            color: var(--accent);
+            margin-bottom: 10px;
+        }
+
+        .genre-card p {
+            color: #c7bdd5;
+            font-size: 0.95rem;
+            min-height: 95px;
+            margin-bottom: 20px;
+        }
+
+        .genre-card a {
+            display: inline-block;
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: bold;
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: 4px;
+            transition: 0.3s;
+        }
+
+        .genre-card a:hover {
+            letter-spacing: 1px;
+        }
+
+        /* CORES INDIVIDUAIS */
+
+        .trap {
+            --accent: #a78bfa;
+        }
+
+        .funk {
+            --accent: #ffb347;
+        }
+
+        .metal {
+            --accent: #b5b5b5;
+        }
+
+        .mpb {
+            --accent: #72d6a0;
+        }
+
+        .rock {
+            --accent: #ff6868;
+        }
+
+        .sertanejo {
+            --accent: #e8bc74;
+        }
+
+        .pop {
+            --accent: #ff70b8;
+        }
+
+        .kpop {
+            --accent: #ee91f5;
+        }
+
+        .jazz {
+            --accent: #72b9ff;
+        }
+
+        /* RODAPÉ */
+
+        footer {
+            background: #171326;
+            border-top: 1px solid #302746;
+            text-align: center;
+            padding: 35px 20px;
+            color: #bcb1cf;
+        }
+
+        footer h2 {
+            color: #ff70b8;
+            margin-bottom: 10px;
+        }
+
+        footer p {
+            margin-bottom: 8px;
+        }
+
+        /* RESPONSIVIDADE */
+
+        @media (max-width: 700px) {
+
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+            }
+
+            .hero h1 {
+                font-size: 2.3rem;
+            }
+
+            .hero {
+                min-height: 400px;
+            }
+
+            .genre-card p {
+                min-height: auto;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- MENU -->
+
+    <nav>
+
+        <div class="logo">
+            🎵 Mundo da Música
+        </div>
+
+        <ul>
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#generos">Gêneros</a></li>
+        </ul>
+
+    </nav>
+
+    <!-- BANNER PRINCIPAL -->
+
+    <header class="hero" id="inicio">
+
+        <div class="tag">
+            UM UNIVERSO DE RITMOS E CULTURAS
+        </div>
+
+        <h1>
+            Descubra o universo da <span>música</span>
+        </h1>
+
+        <p>
+            Do rock ao K-pop, do jazz ao funk: explore diferentes
+            gêneros musicais, conheça suas origens, características,
+            artistas e a influência que exercem no mundo.
+        </p>
+
+        <a href="#generos" class="hero-button">
+            Explorar gêneros musicais
+        </a>
+
+    </header>
+
+    <main>
+
+        <!-- GÊNEROS MUSICAIS -->
+
+        <section class="container" id="generos">
+
+            <h2 class="section-title">
+                Explore os gêneros musicais
+            </h2>
+
+            <p class="section-description">
+                Cada gênero possui uma identidade própria.
+                Escolha um estilo e descubra sua história,
+                seus principais representantes e suas características.
+            </p>
+
+            <div class="genres-grid">
+
+                <div class="genre-card trap">
+                    <div class="genre-icon">🎧</div>
+                    <h3>Trap</h3>
+                    <p>
+                        Um estilo derivado do hip-hop, conhecido por
+                        suas batidas marcantes, graves profundos
+                        e produções eletrônicas.
+                    </p>
+                    <a href="trap.html">Conhecer o Trap →</a>
+                </div>
+
+                <div class="genre-card funk">
+                    <div class="genre-icon">🔥</div>
+                    <h3>Funk</h3>
+                    <p>
+                        Um gênero de grande importância na cultura
+                        brasileira, marcado por ritmos dançantes,
+                        criatividade e diversidade.
+                    </p>
+                    <a href="funk.html">Conhecer o Funk →</a>
+                </div>
+
+                <div class="genre-card metal">
+                    <div class="genre-icon">🤘</div>
+                    <h3>Metal</h3>
+                    <p>
+                        Conhecido por guitarras distorcidas,
+                        baterias intensas e vocais variados,
+                        possui diversos subgêneros.
+                    </p>
+                    <a href="metal.html">Conhecer o Metal →</a>
+                </div>
+
+                <div class="genre-card mpb">
+                    <div class="genre-icon">🎸</div>
+                    <h3>MPB</h3>
+                    <p>
+                        A Música Popular Brasileira reúne diferentes
+                        influências culturais, ritmos, instrumentos
+                        e importantes compositores nacionais.
+                    </p>
+                    <a href="mpb.html">Conhecer a MPB →</a>
+                </div>
+
+                <div class="genre-card rock">
+                    <div class="genre-icon">⚡</div>
+                    <h3>Rock</h3>
+                    <p>
+                        Um dos gêneros mais influentes da história,
+                        marcado por guitarras, bateria e grandes
+                        bandas que transformaram a música.
+                    </p>
+                    <a href="rock.html">Conhecer o Rock →</a>
+                </div>
+
+                <div class="genre-card sertanejo">
+                    <div class="genre-icon">🤠</div>
+                    <h3>Sertanejo</h3>
+                    <p>
+                        Um estilo musical brasileiro que possui
+                        raízes na música caipira e aborda temas
+                        como amor, cotidiano e tradições.
+                    </p>
+                    <a href="sertanejo.html">Conhecer o Sertanejo →</a>
+                </div>
+
+                <div class="genre-card pop">
+                    <div class="genre-icon">💗</div>
+                    <h3>Pop</h3>
+                    <p>
+                        Um gênero conhecido por suas melodias
+                        cativantes, refrões marcantes e grande
+                        presença na cultura popular.
+                    </p>
+                    <a href="pop.html">Conhecer o Pop →</a>
+                </div>
+
+                <div class="genre-card kpop">
+                    <div class="genre-icon">✨</div>
+                    <h3>K-pop</h3>
+                    <p>
+                        A música pop sul-coreana combina diferentes
+                        estilos musicais, performances, coreografias
+                        e produções audiovisuais.
+                    </p>
+                    <a href="kpop.html">Conhecer o K-pop →</a>
+                </div>
+
+                <div class="genre-card jazz">
+                    <div class="genre-icon">🎷</div>
+                    <h3>Jazz</h3>
+                    <p>
+                        Um gênero de origem afro-americana,
+                        reconhecido pela improvisação,
+                        criatividade e liberdade musical.
+                    </p>
+                    <a href="jazz.html">Conhecer o Jazz →</a>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- RODAPÉ -->
+
+    <footer>
+
+        <h2>🎵 Mundo da Música</h2>
+
+        <p>
+            Um espaço para conhecer, explorar e apreciar
+            diferentes gêneros musicais.
+        </p>
+
+        <p>
+            Projeto desenvolvido para um trabalho na escola
+        </p>
+
+
+    </footer>
+
+</body>
 </html>
