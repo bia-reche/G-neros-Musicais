@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K-pop - Música Pop Coreana</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 100px;
+        }
+
+        body {
+            font-family: 'Montserrat', Arial, sans-serif;
+            background-color: #ffffff;
+            color: #444;
+            line-height: 1.7;
+        }
+
+        header {
+            background: linear-gradient(135deg, #a00060, #d00083, #ff4da6);
+            color: white;
+            text-align: center;
+            padding: 65px 20px;
+            border-bottom: 4px solid #a00060;
+        }
+
+        header h1 {
+            font-family: 'Bebas Neue', Impact, sans-serif;
+            font-size: clamp(65px, 10vw, 100px);
+            font-weight: 400;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 12px;
+            text-shadow: 4px 4px 0 rgba(70, 0, 40, 0.35);
+            line-height: 1;
+        }
+
+        header p {
+            color: #ffe3f2;
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        /* MENU DE NAVEGAÇÃO */
+        nav {
+            background-color: #fff0f7;
+            padding: 15px;
+            text-align: center;
+            border-bottom: 2px solid #f3b3d5;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 12px rgba(160, 0, 96, 0.08);
+        }
+
+        nav a {
+            display: inline-block;
+            color: #b00068;
+            text-decoration: none;
+            margin: 5px 10px;
+            font-weight: 700;
+            font-size: 14px;
+            padding: 9px 15px;
+            border-radius: 25px;
+            transition: 0.3s ease;
+        }
+
+        nav a:hover {
+            color: white;
+            background: linear-gradient(135deg, #a00060, #ed168f);
+            transform: translateY(-2px);
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 20px;
+        }
+
+        section {
+            background-color: #ffffff;
+            margin-bottom: 35px;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #f5c6df;
+            box-shadow: 0 4px 12px rgba(160, 0, 96, 0.08);
+            scroll-margin-top: 100px;
+        }
+
+        h2 {
+            color: #c00073;
+            border-bottom: 3px solid #ed83bd;
+            padding-bottom: 8px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            font-size: 1.5rem;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        li::marker {
+            color: #d00083;
+        }
+
+        .artist-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .artist-card {
+            background-color: #fff7fb;
+            border: 2px solid #f3c1dc;
+            border-left: 5px solid #d00083;
+            border-radius: 12px;
+            padding: 20px;
+            transition: 0.3s ease;
+        }
+
+        .artist-card:hover {
+            transform: translateY(-5px);
+            background-color: #ffedf6;
+            border-color: #e83e9c;
+            box-shadow: 0 5px 15px rgba(208, 0, 131, 0.15);
+        }
+
+        .artist-card h3 {
+            color: #c00073;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+
+        .artist-card p {
+            font-size: 0.95rem;
+            margin-bottom: 0;
+        }
+
+        footer {
+            background: linear-gradient(135deg, #a00060, #d00083);
+            color: white;
+            text-align: center;
+            padding: 25px;
+            margin-top: 30px;
+            border-top: 3px solid #ff80bd;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                padding: 45px 15px;
+            }
+
+            header h1 {
+                font-size: 65px;
+                letter-spacing: 8px;
+            }
+
+            header p {
+                font-size: 14px;
+            }
+
+            nav {
+                position: relative;
+            }
+
+            nav a {
+                margin: 4px;
+                padding: 8px 11px;
+                font-size: 12px;
+            }
+
+            main {
+                padding: 12px;
+            }
+
+            section {
+                padding: 20px;
+            }
+
+            h2 {
+                font-size: 1.3rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>K-POP</h1>
+        <p>Conheça o fenômeno da música pop coreana que conquistou o mundo!</p>
+    </header>
+
+    <nav>
+        <a href="#sobre">O que é K-pop?</a>
+        <a href="#caracteristicas">Características</a>
+        <a href="#artistas">Artistas</a>
+        <a href="#conclusao">Conclusão</a>
+    </nav>
+
+    <main>
+
+        <section id="sobre">
+            <h2>1. O que é K-pop?</h2>
+
+            <p>
+                O K-pop é um gênero musical originário da Coreia do Sul. Seu nome é uma abreviação de <em>Korean Pop</em>,
+                que significa música pop coreana. Embora seja conhecido principalmente pela música pop, o K-pop incorpora
+                influências de diversos estilos musicais, como hip-hop, R&B, rock e música eletrônica.
+            </p>
+
+            <p>
+                O K-pop moderno começou a ganhar forma na década de 1990, quando artistas sul-coreanos passaram a misturar
+                diferentes estilos musicais ocidentais com elementos da cultura coreana. Um dos principais marcos dessa
+                transformação foi a estreia do grupo <strong>Seo Taiji and Boys</strong>, em 1992, que ajudou a renovar a
+                música popular do país.
+            </p>
+
+            <p>
+                Com o passar dos anos, o gênero se desenvolveu e conquistou reconhecimento internacional. A popularização
+                de grupos como BTS e BLACKPINK, além do sucesso mundial da música <em>Gangnam Style</em>, do cantor PSY,
+                em 2012, contribuiu para levar o K-pop a diferentes países.
+            </p>
+        </section>
+
+        <section id="caracteristicas">
+            <h2>Principais Características</h2>
+
+            <ul>
+                <li><strong>Variedade musical:</strong> combina diferentes estilos, como pop, hip-hop, R&B, rock e música eletrônica, criando sonoridades diversificadas.</li>
+
+                <li><strong>Coreografias:</strong> as apresentações costumam apresentar danças elaboradas e sincronizadas, que fazem parte da identidade dos artistas.</li>
+
+                <li><strong>Visual e conceitos:</strong> os artistas utilizam figurinos, cenários, maquiagens e videoclipes que seguem diferentes conceitos e estilos visuais.</li>
+
+                <li><strong>Treinamento artístico:</strong> muitos cantores passam por períodos de preparação em empresas de entretenimento, desenvolvendo habilidades de canto, dança e interpretação antes de estrear oficialmente.</li>
+
+                <li><strong>Grupos e solistas:</strong> o gênero conta tanto com grupos masculinos (boy groups) e femininos (girl groups) quanto com artistas que seguem carreira solo.</li>
+
+                <li><strong>Fandoms:</strong> os fãs possuem grande participação na divulgação das músicas, na organização de projetos e no apoio aos artistas por meio das redes sociais.</li>
+            </ul>
+        </section>
+
+        <section id="artistas">
+            <h2>2. Artistas de Destaque</h2>
+
+            <p>
+                O K-pop ganhou reconhecimento mundial por meio de diversos artistas e grupos que contribuíram para o desenvolvimento e a popularização do gênero:
+            </p>
+
+            <div class="artist-grid">
+
+                <div class="artist-card">
+                    <h3>Stray Kids</h3>
+                    <p>
+                        Grupo masculino que estreou em 2018, conhecido por suas músicas com influências de hip-hop, rap e outros estilos. Seus integrantes também participam ativamente da composição, escrita e produção de suas próprias músicas. Recentemente, o grupo se apresentou no Rock in Rio 2026, sendo headliner do dia 11/09.
+                    </p>
+                </div>
+
+                <div class="artist-card">
+                    <h3>BTS</h3>
+                    <p>
+                        Grupo masculino formado por sete integrantes, que estreou em 2013. Tornou-se um dos maiores representantes do K-pop internacionalmente, conhecido por suas músicas, apresentações e mensagens presentes em suas composições.
+                    </p>
+                </div>
+
+                <div class="artist-card">
+                    <h3>BLACKPINK</h3>
+                    <p>
+                        Grupo feminino formado por Jisoo, Jennie, Rosé e Lisa. É conhecido mundialmente por suas músicas que misturam pop e hip-hop, além de suas coreografias e apresentações marcantes.
+                    </p>
+                </div>
+
+                <div class="artist-card">
+                    <h3>PSY</h3>
+                    <p>
+                        Cantor e rapper sul-coreano que alcançou reconhecimento mundial com a música Gangnam Style, lançada em 2012. Seu videoclipe se tornou um fenômeno internacional e ajudou a popularizar o K-pop em diversos países.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="conclusao">
+            <h2>3. Conclusão</h2>
+
+            <p>
+                O K-pop é um gênero musical de grande importância para a cultura sul-coreana e para a indústria musical mundial. Com sua mistura de estilos musicais, coreografias elaboradas e produções audiovisuais criativas, conquistou milhões de fãs em diferentes países. Além de representar a música da Coreia do Sul, o K-pop contribui para a divulgação de sua cultura, aproximando pessoas de diferentes nacionalidades por meio da música e do entretenimento.
+            </p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Feito por Gabriel Nascimento</p>
+    </footer>
+
+</body>
+</html>
