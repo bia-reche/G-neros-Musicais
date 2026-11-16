@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesquisa: Música Sertaneja</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Rye&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background-color: #F8EEEE;
+            color: #333;
+            padding: 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, #5C0015, #250008);
+            color: #fff;
+            text-align: center;
+            padding: 40px 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+
+        header h1 {
+            font-family: 'Rye', cursive;
+            font-size: clamp(36px, 6vw, 55px);
+            font-weight: 400;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+            text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.6);
+        }
+
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        section {
+            background: #fff;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        h2 {
+            color: #5C0015;
+            border-bottom: 2px solid #5C0015;
+            padding-bottom: 8px;
+            margin-bottom: 15px;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .artist-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .artist-card {
+            background: #F8EEEE;
+            border-left: 4px solid #5C0015;
+            padding: 15px;
+            border-radius: 5px;
+        }
+
+        .artist-card h3 {
+            color: #40000D;
+            margin-bottom: 5px;
+        }
+
+        footer {
+            background: linear-gradient(135deg, #5C0015, #420e0e);
+            color: white;
+            text-align: center;
+            padding: 25px;
+            margin-top: 30px;
+            border-top: 3px solid #2c1a1a;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Música Sertaneja</h1>
+        <p>Uma pesquisa sobre a história, características e principais artistas do gênero</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>O que é Música Sertaneja?</h2>
+
+            <p>A música sertaneja é um gênero musical brasileiro que surgiu no interior do país, principalmente nas regiões Sudeste e Centro-Oeste, durante o século XX. Suas origens estão ligadas à música caipira e às tradições culturais do campo, retratando o cotidiano, os costumes e os sentimentos das pessoas.</p>
+
+            <p>Inicialmente, o gênero era acompanhado principalmente por viola caipira e violão, com letras que falavam sobre a vida rural, a natureza, o amor e as tradições do interior.</p>
+
+            <p>Com o passar dos anos, a música sertaneja passou por transformações, incorporando novos instrumentos, ritmos e estilos. Atualmente, é um dos gêneros musicais mais populares do Brasil.</p>
+
+            <h3>Principais Características:</h3>
+            <ul>
+                <li><strong>Instrumentos:</strong> Uso de viola caipira, violão, guitarra, sanfona, bateria e baixo.</li>
+                <li><strong>Ritmo:</strong> Possui melodias variadas, podendo apresentar ritmos lentos e românticos ou mais animados.</li>
+                <li><strong>Letras:</strong> Abordam principalmente amor, relacionamentos, saudade, vida no campo e experiências pessoais.</li>
+                <li><strong>Duplas:</strong> É muito comum a formação de duplas sertanejas, geralmente com duas vozes que se complementam.</li>
+                <li><strong>Influência cultural:</strong> Representa parte da cultura brasileira e mantém vivas tradições musicais do interior do país.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Artistas de Destaque</h2>
+
+            <p>A música sertaneja ganhou reconhecimento nacional por meio de artistas que contribuíram para o desenvolvimento e a popularização do gênero:</p>
+
+            <div class="artist-grid">
+
+                <div class="artist-card">
+                    <h3>Tonico e Tinoco</h3>
+                    <p>Uma das duplas mais importantes da música caipira brasileira, conhecida por preservar as tradições do interior e popularizar o gênero.</p>
+                </div>
+
+                <div class="artist-card">
+                    <h3>Chitãozinho e Xororó</h3>
+                    <p>Uma das duplas mais famosas do Brasil, responsável por modernizar a música sertaneja e conquistar grande reconhecimento nacional.</p>
+                </div>
+
+                <div class="artist-card">
+                    <h3>Leandro e Leonardo</h3>
+                    <p>Dupla que marcou a história do sertanejo nos anos 1990, com músicas românticas que fizeram muito sucesso.</p>
+                </div>
+
+                <div class="artist-card">
+                    <h3>Zezé Di Camargo e Luciano</h3>
+                    <p>Uma das duplas de maior destaque do sertanejo romântico, conhecida por suas músicas sobre amor e relacionamentos.</p>
+                </div>
+
+                <div class="artist-card">
+                    <h3>Jorge e Mateus</h3>
+                    <p>Dupla que ganhou destaque no sertanejo universitário, misturando elementos tradicionais com sonoridades modernas.</p>
+                </div>
+
+                <div class="artist-card">
+                    <h3>Marília Mendonça</h3>
+                    <p>Cantora que se destacou no sertanejo feminino, conhecida por suas letras sobre relacionamentos, sentimentos e superação.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <section>
+            <h2>Conclusão</h2>
+
+            <p>A música sertaneja é um gênero de grande importância para a cultura brasileira. Surgida a partir das tradições musicais do interior, ela passou por diversas transformações ao longo do tempo, conquistando diferentes gerações. Além de seu valor artístico, representa costumes, sentimentos e histórias do povo brasileiro, continuando a fazer sucesso em todo o país.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Feito por Jamily</p>
+    </footer>
+</body>
+</html>
