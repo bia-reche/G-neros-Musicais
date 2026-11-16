@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesquisa: Trap</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f9;
+            color: #333;
+            padding: 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, #ff416c, #ff4b2b);
+            color: #fff;
+            text-align: center;
+            padding: 40px 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+
+        header h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: clamp(40px, 7vw, 60px);
+            font-weight: 800;
+            margin-bottom: 10px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
+        }
+
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        section {
+            background: #fff;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        h2 {
+            color: #ff416c;
+            border-bottom: 2px solid #ff416c;
+            padding-bottom: 8px;
+            margin-bottom: 15px;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .artist-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .artist-card {
+            background: #fafafa;
+            border-left: 4px solid #ff416c;
+            padding: 15px;
+            border-radius: 5px;
+        }
+
+        .artist-card h3 {
+            color: #222;
+            margin-bottom: 5px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Trap</h1>
+        <p>Uma pesquisa sobre a história, características e principais artistas do gênero</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>O que é o Trap?</h2>
+
+            <p>O <strong>trap</strong> é um subgênero do hip-hop que surgiu nos Estados Unidos, principalmente na década de 1990, nas regiões do Sul do país, especialmente em Atlanta, Geórgia.</p>
+
+            <p>O estilo recebeu influências do hip-hop e do rap e se caracteriza principalmente pelo uso de batidas marcantes, graves fortes, hi-hats rápidos e sons produzidos eletronicamente. Com o passar dos anos, o trap se espalhou pelo mundo e ganhou diferentes características em cada país.</p>
+
+            <h3>Principais Características:</h3>
+
+            <ul>
+                <li><strong>Batidas marcantes:</strong> Uso de graves fortes, baterias eletrônicas e ritmos característicos.</li>
+                <li><strong>Hi-hats rápidos:</strong> Os hi-hats aparecem frequentemente em sequências rápidas, criando uma sonoridade marcante.</li>
+                <li><strong>Letras:</strong> As músicas podem abordar temas como vida nas ruas, dificuldades sociais, dinheiro, relacionamentos, festas e conquistas.</li>
+                <li><strong>Uso de tecnologia:</strong> Forte presença de sintetizadores, efeitos digitais e Auto-Tune na produção vocal.</li>
+                <li><strong>Influência cultural:</strong> O trap influenciou a moda, a linguagem, os videoclipes e o comportamento de muitos jovens.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Artistas de Destaque</h2>
+
+            <p>O trap ganhou grande popularidade por meio de artistas que ajudaram a desenvolver e popularizar o gênero nos Estados Unidos e no Brasil:</p>
+
+            <div class="artist-grid">
+
+                <div class="artist-card">
+                    <h3>Gucci Mane</h3>
+                    <p>Um dos principais nomes do trap de Atlanta, conhecido por sua influência na formação e popularização do gênero durante os anos 2000.</p>
+                </div>
+
+                <div class="artist-card">
+                    <h3>Future</h3>
+                    <p>Um dos maiores representantes do trap moderno, conhecido por sua influência na sonoridade do gênero e pelo uso marcante de Auto-Tune.</p>
+                </div>
+
+                <div class="artist-card">
+                    <h3>Travis Scott</h3>
+                    <p>Artista norte-americano que combina trap, hip-hop e elementos eletrônicos, destacando-se por suas produções e performances.</p>
+                </div>
+
+                <div class="artist-card">
+                    <h3>Matuê</h3>
+                    <p>Um dos principais nomes do trap brasileiro, conhecido por suas produções modernas e pela grande influência na popularização do gênero no Brasil.</p>
+                </div>
+
+                <div class="artist-card">
+                    <h3>Teto</h3>
+                    <p>Artista brasileiro que ganhou destaque no trap nacional com músicas de grande alcance e uma sonoridade moderna.</p>
+                </div>
+
+                <div class="artist-card">
+                    <h3>Veigh</h3>
+                    <p>Um dos destaques da nova geração do trap brasileiro, conhecido por suas músicas que misturam trap, rap e elementos melódicos.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <section>
+            <h2>Conclusão</h2>
+
+            <p>O trap deixou de ser apenas um subgênero do hip-hop e se tornou um importante fenômeno musical e cultural. Sua evolução permitiu que diferentes artistas desenvolvessem novos estilos e sonoridades, fazendo com que o gênero conquistasse milhões de ouvintes ao redor do mundo, inclusive no Brasil.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Feito por Laura Gava</p>
+    </footer>
+</body>
+</html>
