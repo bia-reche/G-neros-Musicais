@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Música Popular Brasileira</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', Arial, sans-serif;
+            background-color: #ffffff;
+            color: #444;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, #ff9f43, #ff7b00, #e86b00);
+            color: white;
+            text-align: center;
+            padding: 55px 20px;
+            border-bottom: 4px solid #e87516;
+        }
+
+        header h1 {
+            font-family: 'Bree Serif', Georgia, serif;
+            font-size: clamp(42px, 7vw, 65px);
+            font-weight: 400;
+            margin-bottom: 12px;
+            letter-spacing: 2px;
+            text-shadow: 3px 3px 5px rgba(100, 45, 0, 0.4);
+        }
+
+        header p {
+            color: #fff5e9;
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        nav {
+            background-color: #fff0df;
+            padding: 16px;
+            text-align: center;
+            border-bottom: 2px solid #ffd2a3;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        nav a {
+            color: #d96500;
+            text-decoration: none;
+            margin: 0 18px;
+            font-weight: 700;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #ff9f43;
+            text-decoration: underline;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 85px;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 20px;
+        }
+
+        section {
+            background-color: #ffffff;
+            margin-bottom: 35px;
+            padding: 25px;
+            border-radius: 12px;
+            border: 1px solid #ffe0c2;
+            box-shadow: 0 4px 12px rgba(180, 95, 20, 0.08);
+            scroll-margin-top: 85px;
+        }
+
+        h2 {
+            color: #e87516;
+            border-bottom: 3px solid #ffb366;
+            padding-bottom: 8px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            font-size: 23px;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        .artist-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .artist-card {
+            background-color: #fffaf5;
+            border: 2px solid #ffd6b0;
+            border-radius: 10px;
+            padding: 20px;
+            transition: 0.3s;
+        }
+
+        .artist-card:hover {
+            transform: translateY(-5px);
+            background-color: #fff0df;
+            border-color: #ff9f43;
+            box-shadow: 0 5px 15px rgba(220, 120, 30, 0.15);
+        }
+
+        .artist-card h3 {
+            color: #e87516;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background: linear-gradient(135deg, #f28c28, #d96500);
+            color: white;
+            text-align: center;
+            padding: 25px;
+            margin-top: 30px;
+            border-top: 3px solid #ffb366;
+        }
+
+        footer p {
+            margin-bottom: 0;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 38px;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 5px 8px;
+            }
+
+            main {
+                padding: 12px;
+            }
+
+            section {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Música Popular Brasileira</h1>
+        <p>Conheça um dos gêneros musicais mais importantes da cultura brasileira!</p>
+    </header>
+
+    <nav>
+        <a href="#historia">História</a>
+        <a href="#caracteristicas">Características</a>
+        <a href="#artistas">Artistas</a>
+    </nav>
+
+    <main>
+
+        <section id="historia">
+            <h2>História da MPB</h2>
+
+            <p>
+                A Música Popular Brasileira (MPB) surgiu na década de 1960,
+                em um período de grandes transformações culturais e políticas
+                no Brasil. O gênero recebeu influências de estilos musicais
+                brasileiros, como o samba e a bossa nova, além de elementos
+                da música internacional.
+            </p>
+
+            <p>
+                A MPB ganhou destaque durante os festivais de música
+                transmitidos pela televisão, tornando-se também uma forma
+                de expressão artística e resistência durante a Ditadura
+                Militar. Ao longo dos anos, incorporou diferentes ritmos
+                e influências, mantendo sua importância na cultura nacional.
+            </p>
+        </section>
+
+        <section id="caracteristicas">
+            <h2>Características Musicais</h2>
+
+            <p>
+                A MPB apresenta grande diversidade de ritmos, melodias
+                e temas. Suas letras frequentemente abordam amor,
+                sentimentos, cotidiano, identidade cultural, desigualdade
+                social, política e questões relacionadas à sociedade brasileira.
+            </p>
+
+            <p>
+                Entre os instrumentos utilizados estão violão, guitarra,
+                piano, teclado, baixo, bateria e instrumentos de percussão.
+                O gênero mistura elementos de samba, bossa nova, forró,
+                rock, jazz e outros estilos, criando uma identidade musical
+                diversificada e característica do Brasil.
+            </p>
+        </section>
+
+        <section id="artistas">
+            <h2>Artistas de Destaque</h2>
+
+            <p>
+                A MPB conquistou grande reconhecimento por meio de
+                compositores e intérpretes que marcaram a história
+                da música brasileira e influenciaram diversas gerações:
+            </p>
+
+            <div class="artist-grid">
+
+                <div class="artist-card">
+                    <h3>Chico Buarque</h3>
+                    <p>
+                        Cantor e compositor conhecido por suas letras
+                        poéticas, críticas sociais e músicas que marcaram
+                        a história da MPB.
+                    </p>
+                </div>
+
+                <div class="artist-card">
+                    <h3>Caetano Veloso</h3>
+                    <p>
+                        Um dos principais nomes da Tropicália, destacou-se
+                        por misturar diferentes estilos musicais e inovar
+                        na música brasileira.
+                    </p>
+                </div>
+
+                <div class="artist-card">
+                    <h3>Gilberto Gil</h3>
+                    <p>
+                        Cantor, compositor e importante representante
+                        da MPB, conhecido por suas influências musicais
+                        variadas e letras marcantes.
+                    </p>
+                </div>
+
+                <div class="artist-card">
+                    <h3>Elis Regina</h3>
+                    <p>
+                        Uma das maiores intérpretes brasileiras,
+                        reconhecida por sua voz expressiva e por
+                        interpretações marcantes de grandes canções.
+                    </p>
+                </div>
+
+                <div class="artist-card">
+                    <h3>Milton Nascimento</h3>
+                    <p>
+                        Cantor e compositor conhecido por sua voz
+                        característica e por suas contribuições ao
+                        movimento musical Clube da Esquina.
+                    </p>
+                </div>
+
+                <div class="artist-card">
+                    <h3>Marisa Monte</h3>
+                    <p>
+                        Cantora e compositora contemporânea, conhecida
+                        por combinar elementos da MPB com diferentes
+                        estilos musicais brasileiros e internacionais.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="conclusao">
+            <h2>Conclusão</h2>
+
+            <p>
+                A Música Popular Brasileira possui grande importância
+                para a identidade cultural do país. Ao longo de sua
+                história, tornou-se uma forma de expressão artística,
+                social e política, representando diferentes realidades
+                e sentimentos da população. Com sua diversidade de ritmos,
+                artistas e composições, a MPB continua influenciando
+                gerações e preservando a riqueza da cultura brasileira.
+            </p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Feito por Lucas ALves</p>
+    </footer>
+
+</body>
+</html>
